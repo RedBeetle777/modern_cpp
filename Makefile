@@ -11,7 +11,7 @@ $(EXECUTABLE):$(OBJECTS)
 	$(CC) $(OBJECTS) -o $@ 
 
 debug:$(SOURCES) $(INCLUDES)
-	$(CC) $(SOURCES) execute $(FLAGS)
+	$(CC) $(SOURCES) $(FLAGS)
 
 clean:
 	rm *.o
