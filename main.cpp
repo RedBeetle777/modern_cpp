@@ -53,7 +53,7 @@ void printAreas(const Collection& collection)
 {
     for(const auto & it : collection)
     {
-        if(*it != nullptr)
+        if(it != nullptr)
         {
             cout << it->getArea() << std::endl;
         }
