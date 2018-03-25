@@ -40,7 +40,7 @@ bool areaLessThan10(Shape* s)
 
 void printCollectionElements(const Collection& collection)
 {
-    for(Collection::const_iterator it = collection.begin(); it != collection.end(); ++it)
+    for(auto it = collection.begin(); it != collection.end(); ++it)
     {
         if(*it != nullptr)
         {
@@ -51,7 +51,7 @@ void printCollectionElements(const Collection& collection)
 
 void printAreas(const Collection& collection)
 {
-    for(vector<Shape*>::const_iterator it = collection.begin(); it != collection.end(); ++it)
+    for(auto it = collection.begin(); it != collection.end(); ++it)
     {
         if(*it != nullptr)
         {
@@ -64,7 +64,7 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
                                      bool (*predicate)(Shape* s),
                                      std::string info)
 {
-    Collection::const_iterator iter = std::find_if(collection.begin(), collection.end(), predicate);
+    auto iter = std::find_if(collection.begin(), collection.end(), predicate);
     if(*iter != nullptr)
     {
         cout << "First shape matching predicate: " << info << endl;
